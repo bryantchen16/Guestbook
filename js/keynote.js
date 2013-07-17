@@ -1,27 +1,4 @@
-$(function() {
-
-	//留言
-	function leaveNote() {
-		var note = $("#note"); //取出HTML中ID為note的元素
-		var message = note.val(); //取任何表單元素的值
-		var content = $("#content"); //取出HTML中ID為content的元素
-		var orginalContent = content.html(); //取出該元素的HTML內容
-		var newContent;
-
-		if (message != "") {
-			//代表第一次
-			if (orginalContent == "") {
-				newContent = message + " " + new Date();
-			}
-			else {
-				newContent = orginalContent 
-					+ "<br>" + message + " " + new Date(); //將舊的訊息串上換行符號還有新訊息
-			}
-
-	        note.val(""); //清除留言文字
-			content.html(newContent); //更新留言板
-		}
-	}
+$(function() { //要用jQuery的語法，要把程式包在這裡面
 
 	//設定按下留言按鈕的事件
 	$("#addNote").on("click", function(event){
@@ -35,4 +12,33 @@ $(function() {
 			leaveNote();
 		}
 	});
+
+	//留言
+	function leaveNote() {
+		var noteElement = $("#note"); //取出HTML中ID為note的元素
+		var contentElement = $("#content"); //取出HTML中ID為content的元素
+
+		var note = noteElement.val(); //取任何表單元素的值
+		var orginalContent = contentElement.html(); //取出該元素的HTML內容
+
+		var newContent;
+
+		if (note != "") {
+
+			var isFirstTime = orginalContent == ""; //布林值 true / false
+			var noteContent = note + " " + new Date();
+
+			if (isFirstTime) { 
+				newContent = noteContent;
+			}
+			else {
+				newContent = orginalContent 
+					+ "<br>" 
+					+ noteContent; //將舊的訊息串上換行符號還有新訊息
+			}
+
+	        noteElement.val(""); //清除留言文字
+			contentElement.html(newContent); //更新留言板
+		}
+	}
 });
