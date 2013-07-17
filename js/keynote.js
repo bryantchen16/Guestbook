@@ -15,9 +15,12 @@ $(function() { //要用jQuery的語法，要把程式包在這裡面
 
 	//留言
 	function leaveNote() {
+
+		var usernameElement = $("#username"); //取出HTML中ID為content的元素
 		var noteElement = $("#note"); //取出HTML中ID為note的元素
 		var contentElement = $("#content"); //取出HTML中ID為content的元素
 
+		var username = usernameElement.val(); //取任何表單元素的值
 		var note = noteElement.val(); //取任何表單元素的值
 		var orginalContent = contentElement.html(); //取出該元素的HTML內容
 
@@ -26,7 +29,7 @@ $(function() { //要用jQuery的語法，要把程式包在這裡面
 		if (note != "") {
 
 			var isFirstTime = orginalContent == ""; //布林值 true / false
-			var noteContent = note + " " + new Date();
+			var noteContent = username + " : " + note + " " + new Date();
 
 			if (isFirstTime) { 
 				newContent = noteContent;
