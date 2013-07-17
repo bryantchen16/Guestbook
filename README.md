@@ -12,7 +12,7 @@ Guestbook
 ------
 
 1. 安裝版本控管工具 -- Git
-
+-
     For window:
     
 	進到 http://code.google.com/p/msysgit/downloads/list 下載安裝最新版本軟體。
@@ -26,7 +26,7 @@ Guestbook
 
 
 2. 下載程式原始碼:
-
+-
 	For Windows:
     
 	進到某個資料夾，按右鍵->Git Clone，貼上 https://github.com/koshuang/Guestbook.git 後按OK即可。
@@ -37,7 +37,7 @@ Guestbook
 	進入某資料夾後，執行 git clone https://github.com/koshuang/Guestbook
 
 
-3. 更新Git的方式
+3. 更新Git的方式	
 	For Windows:
 
 	到Guestbook資料夾上，按右鍵->TortoiseGit->Pull
