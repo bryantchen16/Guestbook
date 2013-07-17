@@ -26,3 +26,6 @@ Guest book
 
 2. 下載程式原始碼:
 進到某個資料夾，按右鍵->Git Clone，貼上 https://github.com/koshuang/Guestbook.git 後按OK即可。
+
+3. 更新Git的方式
+到Guestbook資料夾上，按右鍵->TortoiseGit->Pull
