@@ -15,8 +15,14 @@ Guest book
 ------
 
 1. 安裝版本控管工具 -- Git
-For window:
-進到 http://code.google.com/p/tortoisegit/wiki/Download 頁面下載對應的版本，安裝後重開機。
+
+	For window:
+
+	進到 http://code.google.com/p/msysgit/downloads/list 下載安裝最新版本軟體。
+
+	進到 http://code.google.com/p/tortoisegit/wiki/Download 頁面下載對應的版本，安裝後重開機。
+
+
 
 2. 下載程式原始碼:
 進到某個資料夾，按右鍵->Git Clone，貼上 https://github.com/koshuang/Guestbook.git 後按OK即可。
