@@ -6,7 +6,9 @@ Guestbook
 目的：
 
 1. 讓大家學會基本的網頁設計
+
 2. 讓大家學習如何使用版本控管工具
+
 3. 學習如何在公開的空間放上自己的網頁
 
 ------
@@ -38,6 +40,7 @@ Guestbook
 
 
 3. 更新Git的方式	
+-
 	For Windows:
 
 	到Guestbook資料夾上，按右鍵->TortoiseGit->Pull
