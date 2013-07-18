@@ -35,9 +35,9 @@ $(function() { //要用jQuery的語法，要把程式包在這裡面
 				newContent = noteContent;
 			}
 			else {
-				newContent = orginalContent 
+				newContent = noteContent 
 					+ "<br>" 
-					+ noteContent; //將舊的訊息串上換行符號還有新訊息
+					+ orginalContent; //將舊的訊息串上換行符號還有新訊息
 			}
 
 	        noteElement.val(""); //清除留言文字
