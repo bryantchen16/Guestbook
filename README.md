@@ -35,7 +35,7 @@ Guestbook
 
 	For Mac:
     
-	打開文字介面Command Line
+	打開文字介面Command Line。
 	進入某資料夾後，執行 git clone https://github.com/koshuang/Guestbook
 
 
