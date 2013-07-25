@@ -29,7 +29,9 @@ $(function() { //要用jQuery的語法，要把程式包在這裡面
 		if (note != "") {
 
 			var isFirstTime = orginalContent == ""; //布林值 true / false
-			var noteContent = username + " : " + note + " " + new Date();
+			var dateTime = new Date;
+			var day = dateTime.getFullYear()+'/'+dateTime.getMonth()+'/'+dateTime.getDate()+'   '+dateTime.getHours()+':'+dateTime.getMinutes()+':'+dateTime.getSeconds();;
+			var noteContent = username + " : " + note + "  (" + day+ ")";
 
 			if (isFirstTime) { 
 				newContent = noteContent;
