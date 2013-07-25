@@ -6,17 +6,20 @@
 		<link href="css/keynote.css" rel="stylesheet">
 	</head>
 	<body>
-		<h1>留言板</h1>
+		<h1 class="text-center">留言板</h1>
+		<br />
 		<p>
-			姓名：<input type="text" id="username" placeholder="請輸入姓名"></input><br/>
-			<input type="text" id="note" placeholder="請輸入留言"></input>
-			<a class="btn" id="addNote">留言</a>
+			<p class="text-center">
+				姓名 <input type="text" id="username" placeholder="請輸入姓名"></input><br />
+				留言 <input type="text" id="note" placeholder="請輸入留言"></input><br />
+				<a class="btn" id="addNote">送出</a>
+			</p>
+			<br />
+			<p>
+				<h3 class="text-center">留言內容</h3>
+				<div id="content"></div>
+			</p>
 		</p>
-		<p>
-			<h2>內容:</h2>
-			<div id="content"></div>
-		</p>
-
 	</body>
 	<script src="js/jquery-1.10.1.min.js"></script>
 	<script src="js/keynote.js"></script>

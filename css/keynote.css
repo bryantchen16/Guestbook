@@ -1,10 +1,7 @@
-#content {
+#content {	
 	width: 500px;
 	height: 200px;
 	border: #00008B 2px solid;
 	padding-left: 10px;
 	overflow: auto;
-
-
 }
-
