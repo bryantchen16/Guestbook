@@ -24,26 +24,25 @@ $(function() { //要用jQuery的語法，要把程式包在這裡面
 		var note = noteElement.val(); //取任何表單元素的值
 		var orginalContent = contentElement.html(); //取出該元素的HTML內容
 
-		var newContent;
-
 		if (note != "") {
 
 			var isFirstTime = orginalContent == ""; //布林值 true / false
 			var dateTime = new Date;
 			var day = dateTime.getFullYear()+'/'+dateTime.getMonth()+'/'+dateTime.getDate()+'   '+dateTime.getHours()+':'+dateTime.getMinutes()+':'+dateTime.getSeconds();;
-			var noteContent = username + " : " + note + "  (" + day+ ")";
+			// var noteContent = username + " : " + note + "  (" + day+ ")";
 
-			if (isFirstTime) { 
-				newContent = noteContent;
-			}
-			else {
-				newContent = noteContent 
-					+ "<br>" 
-					+ orginalContent; //將舊的訊息串上換行符號還有新訊息
-			}
+			var source   = $("#entry-template").html();
+			var template = Handlebars.compile(source);
+
+			var item = {
+				name: username,
+				note: note
+			};
+
+			var newContent = template(item);
+			$("#content").prepend($(newContent)); //把新的內容塞到content的最上邊
 
 	        noteElement.val(""); //清除留言文字
-			contentElement.html(newContent); //更新留言板
 		}
 	}
 });
